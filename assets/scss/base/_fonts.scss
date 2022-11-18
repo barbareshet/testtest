@@ -1,0 +1,30 @@
+@font-face {
+  // font-family: impact;
+  // src: url(../../assets/fonts/impact.ttf),
+  //      url(../../assets/fonts/impact.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'NexaBold', sans-serif;
+  src: url('../../assets/fonts/Nexa-Bold.eot');
+  src: local('Nexa Bold'), local('Nexa-Bold'),
+  url('../../assets/fonts/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/Nexa-Bold.woff2') format('woff2'),
+  url('../../assets/fonts/Nexa-Bold.woff') format('woff'),
+  url('../../assets/fonts/Nexa-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaRegular', sans-serif;
+  src: url('../../assets/fonts/Nexa-Regular.eot');
+  src: local('Nexa Regular'), local('Nexa-Regular'),
+  url('../../assets/fonts/Nexa-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/Nexa-Regular.woff2') format('woff2'),
+  url('../../assets/fonts/Nexa-Regular.woff') format('woff'),
+  url('../../assets/fonts/Nexa-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}

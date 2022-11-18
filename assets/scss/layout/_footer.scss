@@ -1,0 +1,141 @@
+.footer {
+  @extend .bg-dark;
+  padding: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+
+  &--sidebar {
+
+  }
+
+  @include media-breakpoint-up('md') {
+    padding: 25px;
+  }
+
+  a {
+    color: $black;
+  }
+
+  &__company-details {
+    font-size: 18px;
+
+    li {
+      &:nth-child(2) {
+        border-right: 1px solid $sand;
+      }
+    }
+
+    &--sidebar {
+      font-family: $font-regular;
+      font-size: 14px;
+
+      li {
+        &:nth-child(2) {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+
+    &--sidebar {
+      font-family: $font-regular;
+    }
+  }
+
+  &__company-details,
+  &__copyright {
+    line-height: 20px;
+    text-align: center;
+    color: $white;
+    font-family: $font-regular;
+
+    p,
+    a {
+      color: $white;
+    }
+  }
+
+  &__contact-details {
+    margin: 19px 0px;
+
+    @include media-breakpoint-up('md') {
+      display: inline;
+      margin: 0px;
+    }
+
+  }
+
+  &__copyright {
+    margin-bottom: 25px;
+    margin-top: 15px;
+
+    .list-inline {
+      .list-inline-item {
+        &:not(:last-of-type) {
+          border-right: 1px solid $sand;
+        }
+      }
+    }
+
+    &--sidebar {
+      .list-inline {
+        .list-inline-item {
+          &:not(:last-of-type) {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__menu {
+    font-weight: 500;
+    margin: 15px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-condensed;
+
+    @include media-breakpoint-up('md') {
+      font-size: 18px;
+    }
+
+    a {
+      margin: 0 12px;
+      color: $sand;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  &__social-icons {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    margin: 0;
+
+    &--sidebar {
+      a {
+        width: 40px;
+        height: 40px;
+      }
+
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+#menu-footer {
+  padding-left: 0;
+}

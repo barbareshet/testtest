@@ -1,0 +1,40 @@
+.wp-block {
+  max-width: initial;
+}
+
+.block-list-appender {
+  margin-top: 30px;
+}
+
+.editor-block-list__layout {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.post-new-php .editor-inserter,
+.edit-post-layout .editor-block-drop-zone .editor-inserter,
+.edit-post-layout .editor-block-list__empty-block-inserter .editor-inserter {
+  left: 50% !important;
+  -webkit-transform: translateX(-50%) !important;
+  transform: translateX(-50%) !important;
+}
+
+[data-aos^='fade'][data-aos^='fade'] {
+  opacity: 1 !important;
+}
+
+.post-type-page .components-toolbar__control[aria-label="Align left"],
+.post-type-page .components-toolbar__control[aria-label="Align center"],
+.post-type-page .components-toolbar__control[aria-label="Align right"],
+.post-type-page .components-toolbar__control[aria-label="Wide width"],
+.post-type-page .components-toolbar__control[aria-label="Full width"] {
+  display: none !important;
+}
+
+.editor-styles-wrapper ul {
+  list-style-type: none !important;
+}
+
+.video .card {
+  max-width: 100%;
+}

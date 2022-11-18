@@ -1,0 +1,13 @@
+.site-content__content__blog {
+	.blog-loader {
+		position: relative;
+		min-height: 100px;
+
+		.loader {
+			position:absolute;
+		    top: 30%;
+			left: 50%;
+			transform: translate(-50%,-100%);
+		}
+	}
+}

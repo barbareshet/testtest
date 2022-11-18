@@ -1,0 +1,140 @@
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+.blog,
+.category,
+.home,
+.search,
+.single-post {
+  .site-content__content {
+    background-image: url(../../assets/images/footer-lines.svg), url(../../assets/images/grass.png);
+    background-position: right bottom, center top;
+    background-size: 45%, 100%;
+    background-repeat: no-repeat;
+    background-color: $white;
+    min-height: calc(100vh - 135px);
+    //asas
+  }
+}
+
+main {
+  flex: 1;
+}
+
+.site-content {
+  background-image: url(../../assets/images/footer-lines.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: $white;
+
+  @include media-breakpoint-up('xl') {
+  }
+
+  &__author {
+    color: $gray-600;
+
+    p,
+    a {
+      color: $gray-600;
+    }
+  }
+
+  &__content {
+    > .container {
+      padding-bottom: 80px;
+      padding-top: 50px;
+    }
+
+    &__blog {
+      background-color: $white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+      margin-bottom: 30px;
+
+      &__related {
+        background-color: $white;
+        padding-top: 1rem;
+      }
+    }
+
+    &__search {
+      background-color: $white;
+      .result-head-container {
+        padding: 30px 0;
+      }
+      article {
+        &:first-child {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__header {
+    padding: 15px 0;
+    margin-bottom: 30px;
+
+    .icon {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  &__utility {
+    font-size: 13px;
+    padding: 8px 0;
+
+    &__link {
+      color: $white;
+
+      .icon {
+        fill: $white;
+        position: relative;
+        top: 1px;
+        vertical-align: baseline;
+
+        &-share {
+          height: 12px;
+          width: 18px;
+        }
+      }
+    }
+  }
+}
+
+.dark-bg {
+  background-color: $night-blue !important;
+  color: $white !important;
+  .icon {
+    fill: $white;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-bold;
+}
+
+p, label {
+  font-family: $font-regular;
+}
+
+.bg-bright {
+  color: $white;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}

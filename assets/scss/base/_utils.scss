@@ -1,0 +1,14 @@
+.hr-negative-margin {
+  margin-right: -23px;
+  margin-left: -23px;
+
+  &-sm {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  &-lg {
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+}

@@ -1,0 +1,43 @@
+.table {
+  border: 1px solid #ccc;
+
+  thead {
+    th {
+      border-bottom: 0;
+      border-top: 0;
+      color: $white;
+      font-family: $font-condensed;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    tr {
+      background-color: $tertiary;
+
+    }
+  }
+
+  tr {
+    background-color: $white;
+
+    td {
+      color: black;
+      font-family: $font-italic;
+    }
+  }
+
+  th {
+    border-top: 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+}
+
+.bg-white {
+  .table {
+    tr {
+      border-left: 1px solid #dee2e6;
+      border-right: 1px solid #dee2e6;
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+}

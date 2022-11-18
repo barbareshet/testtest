@@ -1,0 +1,63 @@
+@each $color-key, $hex in $theme-colors {
+  .bg-#{$color-key} {
+    color: getLightOrDarkTextColor($hex);
+
+    .btn-#{$color-key} {
+      @if getLightOrDarkTextColor($hex) == $dark {
+        @extend .btn-outline-dark;
+      } @else {
+        @extend .btn-outline-light;
+      }
+    }
+
+    @if $color-key == "primary" {
+      a {
+        color: $light;
+
+        &:hover {
+          color: darken($light, 5%);
+        }
+      }
+    }
+
+    + .bg-#{$color-key} {
+      display: block;
+    }
+  }
+}
+
+.bg-light {
+  color: $text-color;
+  a {
+    color: $text-color;
+  }
+}
+
+.bg-black-marble {
+  background-image: url('../../assets/images/Dark_Sandstone.png');
+  color: $light;
+
+  a {
+    color: $light;
+
+    &:hover {
+      color: darken($light, 5%);
+    }
+  }
+}
+
+.bg-cloth-1 {
+  background-image: url('../../assets/images/Canvas.png');
+}
+
+.bg-cloth-2 {
+  background-image: url('../../assets/images/Paper.png');
+}
+
+.bg-cloth-3 {
+  background-image: url('../../assets/images/testimonials-bg.jpg');
+}
+
+.bg-red-map {
+  background-image: url('../../assets/images/Three_Years_Five_Films.jpg');
+}

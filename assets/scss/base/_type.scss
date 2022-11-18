@@ -1,0 +1,56 @@
+.blockquote {
+  color: $white;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 2;
+  margin-bottom: $blockquote-margin-bottom;
+}
+
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  @include media-breakpoint-up('md') {
+    margin-bottom: $headings-large-margin-bottom;
+  }
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: $mobile-headings-small-margin-bottom;
+
+  @include media-breakpoint-up('md') {
+    margin-bottom: $headings-small-margin-bottom;
+  }
+}
+
+p {
+  @include media-breakpoint-up('md') {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+}
+
+figcaption {
+  @extend .d-block;
+}
+
+button.link {
+  background: none;
+  border: none;
+  color: $primary;
+  cursor: pointer;
+  font: inherit;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  outline: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

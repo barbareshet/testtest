@@ -1,0 +1,73 @@
+/**
+ * Custom Blocks
+ *
+ * @package MJK
+ */
+
+.custom-block {
+  &.bg-gray {
+    color: $text-color;
+  }
+  &.needs-spacing {
+
+    &-small {
+      padding: $mobile-block-spacing-small 0;
+
+      @each $color-key, $hex in $theme-colors {
+        &.bg-#{$color-key} + .bg-#{$color-key} {
+          padding-top: ($mobile-block-spacing-small / 2);
+        }
+      }
+
+      @include media-breakpoint-up('sm') {
+        padding: $block-spacing-small 0;
+
+        @each $color-key, $hex in $theme-colors {
+          &.bg-#{$color-key} + .bg-#{$color-key} {
+            padding-top: ($block-spacing-small / 2);
+          }
+        }
+      }
+    }
+
+    &-medium {
+      padding: $mobile-block-spacing 0;
+
+      @each $color-key, $hex in $theme-colors {
+        &.bg-#{$color-key} + .bg-#{$color-key} {
+          padding-top: ($mobile-block-spacing / 2);
+        }
+      }
+
+      @include media-breakpoint-up('sm') {
+        padding: $block-spacing 0;
+
+        @each $color-key, $hex in $theme-colors {
+          &.bg-#{$color-key} + .bg-#{$color-key} {
+            padding-top: ($block-spacing / 2);
+          }
+        }
+      }
+    }
+
+    &-large {
+      padding: $mobile-block-spacing-large 0;
+
+      @each $color-key, $hex in $theme-colors {
+        &.bg-#{$color-key} + .bg-#{$color-key} {
+          padding-top: ($mobile-block-spacing-large / 2);
+        }
+      }
+
+      @include media-breakpoint-up('sm') {
+        padding: $block-spacing-large 0;
+
+        @each $color-key, $hex in $theme-colors {
+          &.bg-#{$color-key} + .bg-#{$color-key} {
+            padding-top: ($block-spacing-large / 2);
+          }
+        }
+      }
+    }
+  }
+}

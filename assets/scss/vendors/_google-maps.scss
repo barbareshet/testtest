@@ -1,0 +1,15 @@
+.acf-map {
+  height: 400px !important;
+  position: static !important;
+  width: 100%;
+
+  img {
+    max-width: inherit !important;
+  }
+}
+
+.map {
+  .embed-responsive {
+    height: 400px;
+  }
+}

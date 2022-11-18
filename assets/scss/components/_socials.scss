@@ -1,0 +1,48 @@
+/* Social Links Styles
+----------------------------------------------- */
+
+.socials {
+  margin: 30px 0;
+
+  ul {
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: 0px 20px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: $secondary;
+    border-radius: 50%;
+    transition: all 0.25s;
+
+    @include media-breakpoint-up('md') {
+      margin: 0 10px;
+    }
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    .icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      fill: $white;
+      transform: translate(-50%, -50%);
+      height: 35px;
+      width: 35px;
+
+      &-instagram {
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+}

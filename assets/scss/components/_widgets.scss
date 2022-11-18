@@ -1,0 +1,55 @@
+.widget {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .35);
+  background-color: $white;
+
+  &-title {
+    background-color: $night-blue;
+    color: $white;
+    margin-bottom: 0;
+    //padding: 14px ($grid-gutter-width * .5) 12px;
+    a {
+      color: $manatee;
+      text-transform: capitalize;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .searchform {
+    padding: ($grid-gutter-width * .5);
+  }
+
+  .wp-block-group {
+    padding: 30px;
+    a {
+      color: $text-color;
+    }
+  }
+
+}
+
+.woocommerce {
+  .product_list_widget {
+    a {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        //box-shadow: 0px 0px 8px rgba(0,0,0,0.5) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/**
+ * Module: Cards
+ *
+ * @package MJK
+ */
+
+.cards {
+  a {
+    h4 {
+      margin-bottom: $mobile-headings-small-margin-bottom;
+
+      @include media-breakpoint-up('md') {
+        margin-bottom: $headings-small-margin-bottom;
+      }
+    }
+  }
+  .btn-primary {
+    background-color: $blackberry-gray;
+    border: none;
+    &:hover {
+      background-color: #413E53;
+    }
+  }
+  img {
+    border-radius: 8px;
+  }
+}
+
+.card {
+  &-top {
+    display: block;
+    position: relative;
+
+    &__play-button {
+      cursor: pointer;
+      left: 50%;
+      padding: 16px 17px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 125px;
+
+      @include media-breakpoint-up('md') {
+        padding: 24px 25px;
+      }
+    }
+  }
+}
+
+.intro-content {
+  p:last-child {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+}

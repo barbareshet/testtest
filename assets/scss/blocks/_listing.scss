@@ -1,0 +1,71 @@
+/**
+ * Module: Listing
+ *
+ * @package MJK
+ */
+
+.listing {
+  position: relative;
+  @each $color-key,
+  $hex in $theme-colors {
+    &.bg-#{$color-key} + &.bg-#{$color-key} {
+      padding-top: 0;
+
+      .container {
+        padding-top: $block-spacing;
+        border-top: solid 1px $bright-gray;
+      }
+    }
+  }
+
+  &__img {
+    height: auto;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+
+    @include media-breakpoint-up('md') {
+      width: auto;
+    }
+  }
+
+  &__content {
+    @include media-breakpoint-up('md') {
+      padding-left: 30px;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.result {
+  &__date {
+    color: $gray-700;
+
+    p, a {
+      color: $gray-700;
+    }
+  }
+
+  &__excerpt {
+    max-height: 75px;
+    overflow: hidden;
+
+    &__more {
+      font-weight: 700;
+      font-family: $font-regular;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    display: inline;
+  }
+
+  a {
+    color: $black;
+  }
+}

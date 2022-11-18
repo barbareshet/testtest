@@ -1,0 +1,142 @@
+.btn {
+  text-transform: uppercase;
+  font-family: $font-bold;
+  border-radius: 15px;
+  font-size: 16px;
+
+  & + .btn {
+    margin-left: 1rem;
+  }
+
+  .red-btn {
+    background-color: $mandarin;
+    color: $white;
+
+    &:hover {
+      background-color: $mandarin-dark;
+    }
+  }
+  .green-btn {
+    background-color: $light-bluish-green;
+    color: $white;
+  }
+  .gray-btn {
+    background-color: $blackberry-gray;
+    color: $white;
+  }
+
+  &-checkbox {
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #212529;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+
+    label {
+      background-color: $light-bluish-green;
+      border: none;
+      border-radius: 17px;
+      color: $white;
+      cursor: pointer;
+      float: left;
+
+      span {
+        border-radius: 17px;
+        display: block;
+        padding: .275rem .75rem .375rem;
+        text-align: center;
+        z-index: 2;
+      }
+
+      input {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    input {
+      &:checked {
+        &:hover + span {
+          background-color: $gray-200;
+          color: $black;
+        }
+        & + span {
+          background-color: $light-bluish-green;
+          color: $white;
+          border-radius: 17px;
+        }
+      }
+
+      &:hover + span {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+
+      & + span {
+        transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+      }
+    }
+  }
+
+  &-primary {
+    &--font-large {
+      font-size: 19px;
+    }
+  }
+
+  &-share {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    bottom: 0;
+    padding-bottom: .2rem;
+    padding-right: 0;
+    padding-top: 0;
+    position: fixed;
+    right: 0;
+    z-index: 1000000000;
+    background-color: $light-bluish-green;
+    border: none;
+
+    .icon-share {
+      fill: $white;
+      height: 30px;
+      margin-top: 7px;
+      width: 30px;
+    }
+  }
+
+  &-search {
+    appearance: none;
+    background-image: url('../../assets/images/Search_Icon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $gray-100;
+    border-top: 1px solid $gray-400;
+    border-right: 1px solid $gray-400;
+    border-bottom: 1px solid $gray-400;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    padding: 0px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-indent: -9999px;
+    transition: all .25s ease-in;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}

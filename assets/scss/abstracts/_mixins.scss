@@ -1,0 +1,57 @@
+// Responsive Utilities
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin container-width($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width - 30px;
+    }
+  }
+}
+
+// our mixins
+@function getLightOrDarkBorderColor($current-color) {
+  @if (lightness($current-color) > 50) {
+    @return $dark; // Lighter background, return dark color
+  } @else {
+    @return $light; // Darker background, return light color
+  }
+}
+
+@function getLightOrDarkTextColor($color) {
+  @if (lightness($color) > 50) {
+    @return $dark; // Lighter background, return dark color
+  } @else {
+    @return $light; // Darker background, return light color
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: ($padding-y*.85) $padding-x ($padding-y*1.15);
+  font-size: $font-size;
+  line-height: $line-height;
+  // Manually declare to provide an override to the browser default
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  } @else {
+    border-radius: 0;
+  }
+}

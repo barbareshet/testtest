@@ -1,0 +1,28 @@
+.product {
+	
+	&__pricing {
+		del {
+			font-size:90%;
+
+			& + ins {
+				margin-left:5px;
+
+		    	@include media-breakpoint-only(lg) {
+		    		margin-left:0;
+		    	}
+			}
+		}
+
+		ins {
+			text-decoration: none;
+		}
+	}
+
+	&__cta {
+    	@include media-breakpoint-only(lg) {
+    		display: flex;
+    		width: 100%;
+		}
+	}
+
+}

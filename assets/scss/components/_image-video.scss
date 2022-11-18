@@ -1,0 +1,129 @@
+.image {
+    &__buttons {
+        margin-top: 75px;
+    }
+
+    .slick-arrow {
+        @include media-breakpoint-down('lg') {
+            display: none;
+        }
+    }
+
+    .slick-next {
+        @include media-breakpoint-up('lg') {
+            right: -85px;
+        }
+    }
+
+    .slick-prev {
+        @include media-breakpoint-up('lg') {
+            left: -85px;
+        }
+    }
+}
+
+.play {
+    &__link {
+        cursor: pointer;
+        left: 50%;
+        padding: 16px 17px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        &:before {
+            background: $primary;
+            border-radius: 18px;
+            bottom: -3px;
+            content: "";
+            left: -11px;
+            opacity: .85;
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            transition: all .25s ease-in;
+            z-index: 2;
+
+            @include media-breakpoint-up('md') {
+                height: 62px;
+                left: 0px;
+                right: 0;
+                top: 0;
+                width: 95px;
+            }
+        }
+
+        .icon {
+            fill: #fff;
+            height: 20px;
+            left: 2px;
+            position: relative;
+            top: 2px;
+            width: 20px;
+            z-index: 3;
+
+            @include media-breakpoint-up('md') {
+                height: 28px;
+                left: 11px;
+                top: -8px;
+                width: 28px;
+            }
+        }
+
+        @include media-breakpoint-up('md') {
+            padding: 24px 25px;
+        }
+
+        &--mixed-content {
+            top: 23%;
+
+            @include media-breakpoint-up('sm') {
+                left: 50%;
+                top: 27%;
+            }
+
+            @include media-breakpoint-up('md') {
+                left: 25%;
+                top: 50%;
+            }
+        }
+
+        &--image {
+            left: 30%;
+
+            &:before {
+                @include media-breakpoint-up('md') {
+                    width: 75px;
+                }
+            }
+        }
+
+        &--small {
+            @include media-breakpoint-up('lg') {
+                left: 53%;
+                top: 50%;
+            }
+
+            @include media-breakpoint-up('md') {
+                .icon {
+                    height: 23px;
+                    left: -3px;
+                    top: -13px;
+                }
+
+                &:before {
+                    height: 50px;
+                    width: 65px;
+                }
+            }
+
+            &--cards {
+                @include media-breakpoint-up('lg') {
+                    top: 60%;
+                }
+            }
+        }
+    }
+}

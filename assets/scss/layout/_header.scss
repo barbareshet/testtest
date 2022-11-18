@@ -1,0 +1,525 @@
+.navbar {
+  @extend .bg-dark;
+  position: fixed;
+  top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+
+  @include media-breakpoint-down('lg') {
+    padding-bottom: 1rem;
+  }
+
+  .nav-link {
+    font-family: $font-regular;
+    text-transform: uppercase;
+    @include media-breakpoint-up('xl') {
+      margin-right: 1.25rem;
+    }
+  }
+
+  &-brand {
+    margin-left: 1rem;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  &-collapse {
+    @include media-breakpoint-up('md') {
+      justify-content: flex-end;
+    }
+  }
+
+  @include media-breakpoint-down('lg') {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up('xl') {
+    .form-control {
+      width: 250px;
+      height: 100%;
+    }
+  }
+
+}
+
+.site-header {
+  box-shadow: 0 5px 11px rgba(0, 0, 0, .15);
+  position: fixed;
+  z-index: 99998;
+  width: 100vw;
+
+  &__brand {
+    &__img {
+      width: 240px;
+
+      @include media-breakpoint-down('md') {
+        width: 200px;
+      }
+
+      @media(max-width: 350px) {
+        width: 210px;
+      }
+    }
+  }
+
+  &__search {
+    padding-left: 20px;
+  }
+
+  &__navbar {
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    background-size: 30%, 100%;
+    background-image: url(../../assets/images/oval2.png), linear-gradient(to bottom, rgba(80, 80, 80, 0.80), rgba(0, 0, 0, 0.52) 50%, rgba(0, 0, 0, 0.01) 100%);
+
+    @include media-breakpoint-down('md') {
+      height: auto;
+      padding: 0;
+    }
+
+    .navbar-toggler {
+      margin: 14px 0;
+      padding: 0;
+
+      @include media-breakpoint-down('md') {
+        // border-left: 1px solid $gray-500;
+        border-radius: 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    > .nav-item {
+      height: 70px;
+
+      @include media-breakpoint-up('xl') {
+        padding-bottom: 10px;
+        margin-top: 5px;
+      }
+
+      @media(max-width: 350px) {
+        height: 35px;
+      }
+
+      @include media-breakpoint-down('xl') {
+        height: 50px;
+      }
+    }
+
+    .li--top {
+      border-bottom: 1px solid $dark;
+      text-align: center;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .nav-link {
+      background-color: transparent;
+      color: $white;
+      height: 100%;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .btn-search,
+  [type="search"] {
+    height: 41px;
+  }
+
+  .navbar-collapse {
+    @include media-breakpoint-down('md') {
+      padding-bottom: 20px;
+    }
+
+    &__search {
+      padding: 15px;
+
+      .form-control {
+        border-right: 0;
+      }
+    }
+  }
+
+  .back-btn {
+    border-bottom: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before {
+      // convert this back to theme directory!
+      content: url($theme-directory + 'assets/images/Chevron_Left_Menu.svg');
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // implemented height on this property for proper on hover display of dropdown menu
+  .navbar-nav {
+
+    > .menu-item-has-children {
+      @include media-breakpoint-up('xl') {
+        position: relative;
+
+        &:hover {
+          &::after {
+            content: '';
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid $sand;
+            height: 0;
+            left: 15px;
+            position: absolute;
+            top: 100%;
+            transform: translateY(-100%);
+            width: 0;
+          }
+        }
+      }
+    }
+
+    > .nav-item {
+      > .nav-link {
+        color: $dark;
+
+        @include media-breakpoint-up('xl') {
+          color: $white;
+        }
+      }
+
+      &.primary-button {
+        margin: 4px 0 12px;
+
+        @include media-breakpoint-up('xl') {
+          margin: 4px 0 4px;
+        }
+
+        a.nav-link {
+          @extend .btn;
+          @extend .btn-primary;
+          color: $white;
+          padding-top: 3px;
+          padding-bottom: 5px;
+          display: block;
+
+          @include media-breakpoint-up('sm') {
+            display: inline-block;
+          }
+
+          @include media-breakpoint-up('xl') {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down('lg') {
+      display: block;
+      // height: 100%;
+      left: 0%;
+      padding: 5px 15px 15px 15px;
+      position: relative;
+      transition-property: left;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(.4, .15, .6, .85);
+      transition-delay: 0s;
+      //will change to -100% when nav-link is clicked
+      width: 100%;
+      height: 350px;
+
+      .dropdown-menu {
+        border: 0;
+        height: auto;
+        left: 100%;
+        position: absolute;
+        top: 0;
+        transition-property: left;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(.4, .15, .6, .85);
+        transition-delay: 0s;
+        width: 100%;
+
+        &--active {
+          display: block;
+          left: 0;
+        }
+      }
+
+      .dropdown {
+        position: static;
+
+        > .nav-link {
+          position: relative;
+
+          &::after {
+            content: url($theme-directory + 'assets/images/Chevron_Right_Menu.svg');
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      > li {
+        .nav-link {
+          align-items: initial;
+          display: block;
+        }
+      }
+    }
+
+    > li {
+
+      @include media-breakpoint-up('xl') {
+        padding-top: 23px;
+        padding-bottom: 22px;
+      }
+
+      .nav-link {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up('xl') {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+
+    &.dropdown-menu-center {
+      position: fixed;
+      top: 86px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+  }
+}
+
+.dropdown {
+  @include media-breakpoint-up('xl') {
+    position: relative;
+  }
+}
+
+.dropdown-menu {
+  background-color: $sand;
+  border: none;
+  border-radius: 0;
+  left: auto;
+  min-width: 17rem;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+
+  @include media-breakpoint-up('xl') {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down('lg') {
+    display: none;
+    height: 345px;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &--has-children {
+    @include media-breakpoint-up('xl') {
+      padding: 1.5rem 0;
+      width: 1140px;
+
+      &::after {
+        left: 47.5%;
+      }
+    }
+  }
+
+  &__wrap {
+    @include media-breakpoint-up('xl') {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      .dropdown {
+        li {
+          padding-left: 0;
+        }
+      }
+
+      > li {
+        align-items: stretch;
+        width: 100%;
+
+        &:not(:last-child) {
+          border-right: 1px solid $gray-800;
+        }
+
+        > .nav-link {
+          font-size: 23px;
+          padding-bottom: 1rem;
+        }
+
+        .nav-link {
+          height: 35px;
+        }
+      }
+
+      ul {
+        display: inline;
+        padding: 0;
+        position: relative;
+      }
+    }
+
+  }
+
+  li {
+    padding-left: 15px;
+
+    @include media-breakpoint-down('xl') {
+      margin-right: 15px;
+      margin-left: 15px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .nav-link {
+      color: $dark;
+
+      &--top {
+        font-size: 18px
+      }
+
+      & > .dropdown-menu {
+        display: block;
+        position: relative;
+      }
+    }
+
+    &:hover .sub-menu {
+      visibility: visible;
+    }
+  }
+
+  .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+  }
+
+  @include media-breakpoint-up('xl') {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+
+}
+
+// mobile hamburger
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 28px;
+  position: relative;
+  user-select: none;
+  margin-bottom: 0;
+
+  .navicon {
+    background: $white;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 24px;
+  }
+
+  .navicon {
+    &:before,
+    &:after {
+      background: $white;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+    }
+
+    &:after {
+      top: -6px;
+    }
+
+    &:before {
+      top: 6px;
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+
+  &:checked {
+    & ~ .menu {
+      max-height: 240px;
+    }
+
+    & ~ .menu-icon {
+      .navicon {
+        background: transparent;
+
+        &:after {
+          transform: rotate(45deg);
+        }
+
+        &:before {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &:not(.steps) .navicon:before,
+      &:not(.steps) .navicon:after {
+        top: 0;
+      }
+    }
+  }
+}
+
+// end of mobile hamburger
+
+.site-content-header {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

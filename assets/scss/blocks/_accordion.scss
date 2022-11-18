@@ -1,0 +1,31 @@
+.accordions {
+  margin-bottom: 3rem;
+
+  .card-header {
+    cursor: pointer;
+  }
+}
+
+#accordion {
+  .card {
+    border: initial;
+    margin-bottom: 10px;
+  }
+}
+
+.chevron-down,
+.chevron-up {
+  height: 20px;
+  width: 20px;
+}
+
+div[aria-expanded=true] .chevron-down,
+div[aria-expanded=false] .chevron-up,
+img[aria-expanded=false] .chevron-up,
+img[aria-expanded=true] .chevron-down,
+.active .icon-plus,
+.active .icon-minus,
+.active .icon-minus,
+.active .icon-plus {
+  display: none;
+}

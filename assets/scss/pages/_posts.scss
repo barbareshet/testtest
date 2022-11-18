@@ -1,0 +1,154 @@
+.comment {
+  &__meta {
+    color: $gray-600;
+  }
+}
+
+.entry {
+  &__content {
+    margin-bottom: 42px;
+
+    .alignleft {
+      height: auto;
+      margin: 0 0 15px 0;
+      width: 100%;
+
+      @include media-breakpoint-up('md') {
+        float: left;
+        margin: 0 30px 20px 0;
+        width: auto;
+      }
+    }
+
+    .alignright {
+      float: right;
+      margin: 0 0 15px 15px;
+    }
+
+    .aligncenter {
+      display: block;
+      margin: 0 auto;
+    }
+
+    blockquote {
+      border-left: 4px solid $black;
+      margin: 1.5em 10px;
+      padding: 0.1rem 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    hr {
+      margin-left: -23px;
+      margin-right: -23px;
+    }
+
+    img {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    blockquote {
+      border-left: 4px solid $black;
+      margin: 1.5em 10px;
+      padding: 0.1rem 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    img {
+      width: 100%;
+    }
+
+    ul {
+      margin-left: 20px;
+      overflow: hidden;
+      padding-left: 15px;
+      width: auto;
+    }
+  }
+
+  &__meta {
+    color: #b2b2b2;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 42px;
+  }
+
+  &__thumb {
+    margin: 20px 0;
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.first-post {
+  .card {
+    padding: 30px;
+  }
+  hr {
+    margin-left: -23px;
+    margin-right: -23px;
+  }
+}
+
+#posts {
+  width: 100%;
+
+  hr {
+    margin-left: -23px;
+    margin-right: -23px;
+  }
+
+  article {
+    width: 100%;
+    margin: 0;
+    padding: 25px 0;
+    font-family: $font-regular;
+
+    &:nth-child(odd) {
+      background-color: #f3f3f3;
+    }
+
+    img {
+      border-radius: 8px;
+    }
+
+    .result__date {
+      color: $dark-telegray;
+      a {
+        color: $dark-telegray;
+      }
+    }
+  }
+}
+
+.related-posts {
+  .related-posts-head {
+    padding: 30px 20px;
+  }
+  article {
+    width: 100%;
+    margin: 0;
+    padding: 25px 0;
+    font-family: $font-regular;
+
+    &:nth-child(odd) {
+      background-color: #f3f3f3;
+    }
+
+    img {
+      border-radius: 8px;
+    }
+
+    .result__date {
+      color: $dark-telegray;
+      a {
+        color: $dark-telegray;
+      }
+    }
+  }
+}

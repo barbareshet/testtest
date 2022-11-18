@@ -1,0 +1,21 @@
+.card {
+  &-body {
+    color: $text-color;
+
+    a {
+      color: $black;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .card-top {
+    a {
+      width: 100%;
+      img {
+        border-radius: 8px;
+      }
+    }
+  }
+}

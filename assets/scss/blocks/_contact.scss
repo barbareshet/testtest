@@ -1,0 +1,16 @@
+/**
+ * Module: Contact
+ *
+ * @package MJK
+ */
+
+.contact {
+  &__form {
+    padding-bottom: 50px;
+  }
+
+  .breadcrumbs {
+    margin-top: -90px;
+    position: absolute;
+  }
+}

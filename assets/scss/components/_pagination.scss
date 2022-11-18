@@ -1,0 +1,114 @@
+/* Pagination Styles
+----------------------------------------------- */
+
+.pagination {
+    border-radius: 0;
+    color: $manatee;
+    font-size: 14px;
+    margin: 15px 0 15px;
+    text-align: center;
+
+    span {
+        display: none;
+    }
+
+    @include media-breakpoint-up('md') {    
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up('md') {    
+        span {
+            display: inline-block;
+            margin: 0 5px;
+        }
+    }
+
+    a {
+        color: $manatee;
+
+        .icon {
+            fill: $manatee;
+        }
+
+        &:hover {
+            color: $dark;
+            text-decoration: none;
+        }
+    }
+
+    .icon {
+        fill: $black;
+        height: 24px;
+        left: -8px;
+        margin-right: -12px;
+        position: relative;
+        top: -1px;
+        vertical-align: middle;
+        width: 24px;
+
+        @include media-breakpoint-up('md') {        
+            height: 30px;
+            margin-right: -15px;
+            width: 30px;
+        }
+    }
+
+    &-newer {
+        display: inline-block;
+        padding: 4px 0px;
+    }
+
+    &-older {
+        display: inline-block;
+        padding: 4px 0px;
+
+        .icon {
+            left: auto;
+            margin-left: -14px;
+            margin-right: 0;
+            right: -8px;
+            fill: $black;
+
+            @include media-breakpoint-up('md') {            
+                margin-left: -17px;
+            }
+        }
+    }
+
+    &-form,
+    &-input {
+        display: inline-block;
+    }
+
+    &__single {
+        text-align: left;
+
+        .pagination-older {
+            padding: 0;
+        }
+
+        .pagination-newer {
+            float: none;
+            padding: 0;
+        }
+    }
+
+    input[type="text"] {
+        @include box-shadow(inset 0 1px 2px #cac8c2);
+        background: #f3f1e9;
+        border: none;
+        color: $gray-500;
+        font-size: 14px;
+        margin: 0 5px;
+        outline: none;
+        padding: 5px;
+        text-align: center;
+        width: 32px;
+
+        @include media-breakpoint-up('md') {        
+            font-size: 16px;
+            padding: 10px;
+            width: 38px;
+        }
+    }
+}

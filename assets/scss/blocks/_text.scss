@@ -1,0 +1,28 @@
+/**
+ * Module: Text
+ *
+ * @package MJK
+ */
+
+.text {
+  position: relative;
+
+  ul {
+    margin-bottom: 3rem;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  &.bg-white {
+    color: $text-color;
+  }
+}

@@ -1,0 +1,58 @@
+/**
+ * Module: Listing (Advanced)
+ *
+ * @package MJK
+ */
+
+.mixed-content {
+  position: relative;
+
+  &-inner {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include media-breakpoint-up('md') {
+      background-position: center right;
+      background-size: 50% auto;
+      min-height: 450px;
+      padding-top: 0;
+    }
+  }
+
+  &-right {
+    @include media-breakpoint-up('md') {
+      background-position: left center;
+    }
+  }
+
+  &__text {
+    padding-top: $block-spacing;
+    padding-bottom: $block-spacing;
+
+    @include media-breakpoint-down('md') {
+      padding-top: $mobile-block-spacing;
+      padding-bottom: $mobile-block-spacing;
+    }
+  }
+
+  .gform_wrapper {
+
+    .validation_error {
+      background: transparent;
+      padding: 0;
+      padding-bottom: $grid-gutter-width * .5;
+    }
+
+    .gform_body {
+      padding-top: 0;
+    }
+
+    .gform_body,
+    .gform_footer {
+      background: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      color: inherit;
+    }
+  }
+}
