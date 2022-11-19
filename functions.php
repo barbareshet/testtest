@@ -47,8 +47,8 @@ function more_posts() {
     return $wp_query->current_post + 1 < $wp_query->post_count;
 }
 
-ini_set('display_errors','Off');
-ini_set('error_reporting', E_ALL );
+//ini_set('display_errors','Off');
+//ini_set('error_reporting', E_ALL );
 
 /**
  * Functions and definitions
@@ -81,7 +81,7 @@ define( 'MJK_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'MJK_THEME_PATH_URL', trailingslashit( get_template_directory_uri() ) );
 
 // Require Autoloader
-require_once 'vendor/autoload.php';
+//require_once 'vendor/autoload.php';
 
 function is_blog () {
     return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();

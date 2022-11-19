@@ -35,7 +35,7 @@ $GLOBALS['style'] = "";
 </head>
 <body <?php body_class(); ?>>
 
-<?php include( 'assets/icons.svg' ); ?>
+<?php require_once( 'assets/icons.svg' ); ?>
 
 <header id="masthead" class="site-header" role="banner">
     <nav class="site-header__navbar navbar navbar-expand-lg">

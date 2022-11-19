@@ -16,6 +16,7 @@ while ( have_rows( 'modules' ) ) {
     $class_name = str_replace( '_', '-', $module_name );
 
     echo '<section id="module-' . $module_index . '" class="' . $class_name . ' module">';
-    include( locate_template( "templates/modules/{$module_name}.php" ) );
+//    include( locate_template( "templates/components/{$module_name}.php" ) );
+    get_template_part('templates/components/', $module_name);
     echo '</section>';
 }
